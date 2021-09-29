@@ -1,0 +1,21 @@
+{
+  "name": "anagram",
+  "version": "1.0.0",
+  "description": "Sample project with a 'isAnagram' function, which accepts two words as inputs, and returns true if the second word is the anagram of the first, and false otherwise",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "isAnagrama in JavaScript",
+    "unit testing",
+    "mocha",
+    "chai"
+  ],
+  "author": "Walmyr Filho <wlsf82@gmail.com> (https://walmyr.dev)",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.2"
+  }
+}
