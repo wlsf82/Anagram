@@ -28,14 +28,22 @@ describe('isAnagram', () => {
   })
 
   it('should throw an error if the provided arguments are not strings', () => {
-    expect(() => isAnagram(1, false)).to.throw('At least one of the parameters is of an invalid type: Param1: 1, Param2: false. Both params should be strings.')
+    expect(() => isAnagram(1, false)).to.throw('Arg1 should be or an array of string, or a string. If the later, arg2 should also be privided, and it should also be a string. Arg1: 1, Arg2: false')
   })
 
   it('should throw an error if the second argument is not a string', () => {
-    expect(() => isAnagram('abc', true)).to.throw('At least one of the parameters is of an invalid type: Param1: abc, Param2: true. Both params should be strings.')
+    expect(() => isAnagram('abc', true)).to.throw('Arg1 should be or an array of string, or a string. If the later, arg2 should also be privided, and it should also be a string. Arg1: abc, Arg2: true')
   })
 
   it('should throw an error if no arguments are provided', () => {
-    expect(() => isAnagram()).to.throw('At least one of the parameters is of an invalid type: Param1: undefined, Param2: undefined. Both params should be strings.')
+    expect(() => isAnagram()).to.throw('Arg1 should be or an array of string, or a string. If the later, arg2 should also be privided, and it should also be a string. Arg1: undefined, Arg2: undefined')
+  })
+
+  it('should return true if the provided argument is an array of three anagram words', () => {
+    expect(isAnagram(['ANGEL', 'glean', 'angle'])).to.equal(true)
+  })
+
+  it('should return false if the provided argument is an array of three non-anagram words', () => {
+    expect(isAnagram(['ANGEL', 'bob', 'threat'])).to.equal(false)
   })
 })
