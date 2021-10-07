@@ -28,15 +28,15 @@ describe('isAnagram', () => {
   })
 
   it('should throw an error if the provided arguments are not strings', () => {
-    expect(() => isAnagram(1, false)).to.throw('Arg1 should be or an array of string, or a string. If the later, arg2 should also be privided, and it should also be a string. Arg1: 1, Arg2: false')
+    expect(() => isAnagram(1, false)).to.throw('Arg1 should be or an array of strings, or a string. If the later, arg2 should also be provided, and it should also be a string. Arg1: 1, Arg2: false')
   })
 
   it('should throw an error if the second argument is not a string', () => {
-    expect(() => isAnagram('abc', true)).to.throw('Arg1 should be or an array of string, or a string. If the later, arg2 should also be privided, and it should also be a string. Arg1: abc, Arg2: true')
+    expect(() => isAnagram('abc', true)).to.throw('Arg1 should be or an array of strings, or a string. If the later, arg2 should also be provided, and it should also be a string. Arg1: abc, Arg2: true')
   })
 
   it('should throw an error if no arguments are provided', () => {
-    expect(() => isAnagram()).to.throw('Arg1 should be or an array of string, or a string. If the later, arg2 should also be privided, and it should also be a string. Arg1: undefined, Arg2: undefined')
+    expect(() => isAnagram()).to.throw('Arg1 should be or an array of strings, or a string. If the later, arg2 should also be provided, and it should also be a string. Arg1: undefined, Arg2: undefined')
   })
 
   it('should return true if the provided argument is an array of three anagram words', () => {
