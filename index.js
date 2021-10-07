@@ -1,17 +1,7 @@
 function isAnagram(arg1, arg2) {
   if (Array.isArray(arg1)) {
-    return arg1.map(arg => {
-      return cleanString(arg)
-    }).map((str, index, arr) => {
-      while (index < arr.length - 1) {
-        if (str === arr[index + 1]) {
-          return true
-        } else {
-          return false
-        }
-      }
-      return true
-    }).every(item => item === true)
+    cleanArray = arg1.map(arg => cleanString(arg))
+    return cleanArray.every(item => item === cleanArray[0])
   } else if (typeof arg1 === 'string' && typeof arg2 === 'string') {
     return cleanString(arg1) === cleanString(arg2)
   } else {
